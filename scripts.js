@@ -1,4 +1,5 @@
 const myLibrary = [];
+let isClicked = false;
 
 function book(title, author, year){
     this.id = crypto.randomUUID();
@@ -50,7 +51,15 @@ function makeTable(){
 }
 
 function handleButtonClickRead(event){
-    event.currentTarget.style.backgroundColor = 'green';
+    const btn = event.currentTarget
+    if(isClicked === false){
+        btn.style.backgroundColor = 'green';
+        isClicked = true;
+    }
+    else{
+        btn.style.backgroundColor = 'white';
+        isClicked = false;
+    }
 }
 
 function handleButtonClickRemove(event){
