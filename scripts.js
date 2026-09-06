@@ -1,8 +1,5 @@
 const myLibrary = [];
 
-//tabledata1.textContent = "Hello World"
-
-//Create Book Constructor
 function book(title, author, year){
     this.id = crypto.randomUUID();
     this.title = title;
@@ -11,9 +8,7 @@ function book(title, author, year){
 
 }
 
-//Create seperate function that allows user to pass the book arguments
 function addBookToLibrary(title, author, year){
-    //Creates the new book object
     const book1 = new book(title, author, year);
     myLibrary.push(book1);
     addBookToTable(myLibrary[myLibrary.length - 1]);
@@ -24,6 +19,16 @@ function addBookToTable(book){
     const tableBody = document.querySelector('tbody');
     const tableRow = document.createElement('tr');  
     tableBody.append(tableRow);
+    const colOneData = document.createElement('td');
+    const buttonRead = document.createElement('button');
+    buttonRead.textContent = 'Read';
+    buttonRead.className = 'read-button';
+    const buttonRemove = document.createElement('button');
+    buttonRemove.textContent = 'Remove';
+    buttonRemove.className = 'remove-button';
+    tableRow.append(colOneData);
+    colOneData.append(buttonRead, buttonRemove);
+    
     const value = Object.values(book);
     for(let i = 0; i < 4; i++){
         console.log(value[i]);
