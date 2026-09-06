@@ -1,4 +1,4 @@
-/* 1. CSS Reset */
+/* CSS Reset */
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -56,4 +56,31 @@ h1, h2, h3, h4, h5, h6 {
 
 button{
   margin: .5rem;
+}
+
+/* Table */
+table{
+    border-collapse: collapse;
+    border: 2px solid black;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+}
+
+caption{
+    caption-side: bottom;
+    padding: 10px;
+    font-weight: bold;
+}
+
+thead, tfoot{
+    background-color: rgb(200 240 245);
+}
+
+th, td{
+    border: 1px solid black;
+    padding: 8px 10px;
+}
+
+tbody > tr:nth-of-type(even) {
+  background-color: rgb(237 238 242);
 }
