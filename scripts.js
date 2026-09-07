@@ -75,6 +75,14 @@ openBtn.addEventListener('click', () => {
     dialog.showModal();
 })
 
+const submitBtn = document.querySelector('#submitBtn');
+const title = document.querySelector('#title');
+const author = document.querySelector('#author');
+const year = document.querySelector('#year');
+
+submitBtn.addEventListener('click', ()=>{
+    addBookToLibrary(title.value, author.value, year.value);
+})
 
 
 
