@@ -68,6 +68,15 @@ function handleButtonClickRemove(event){
     makeTable();
 }
 
+const openBtn = document.querySelector('#new-book');
+const dialog = document.querySelector('#dialog-book');
+
+openBtn.addEventListener('click', () => {
+    dialog.showModal();
+})
+
+
+
 
 addBookToLibrary("Harry Potter and the Half-Blood Prince", "J.K. Rowling", 2005);
 addBookToLibrary("Maze Runner", "James Dashner", 2009);
