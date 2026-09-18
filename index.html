@@ -9,24 +9,29 @@
     <script src="./scripts.js" defer></script>
 </head>
 <body>
+
     <table>
     <caption>
         Book Library
     </caption>
         <thead>
+            <!-- Default Header Row -->
             <tr>
                 <th></th>
                 <th>ID</th>
                 <th>Title</th>
                 <th>Author</th>
-                <th>date</th>
+                <th>Year</th>
+                <th>Is Read?</th>
             </tr>
         </thead>
+        <!-- Book Entries -->
         <tbody>
         </tbody>
     </table>
-    <button id="new-book">New book</button>
 
+    <!-- Below the Table -->
+    <button id="new-book">New book</button>
     <dialog id="dialog-book">
         <form method="dialog" style="display: flex; flex-direction: column;">
             <label for="title">Title</label>
@@ -38,9 +43,12 @@
             <label for="year">Year</label>
             <input type="text" id="year" name="year" required>
 
+            <label for="read">Read?</label>
+            <input type="text" id="read" name="read" required>
+
             <div style="display: flex; gap: 1rem; margin-top: 1rem;">
-                <input type="submit" id="novalidate-close" value="Close" formnovalidate />
-                <input id="submitBtn" type="submit">
+                <button type="reset" id="close-button" value="Close" formnovalidate>Close</button>
+                <button id="submit-btn" type="submit" formnovalidate>Submit</button>
             </div>
         </form>
     </dialog>
